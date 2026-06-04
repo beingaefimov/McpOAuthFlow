@@ -70,6 +70,7 @@ opens browser with login form -> after sign-in the token is injected automatical
 ## Тестовый локальный запуск / Local test run
 
 ```bash
+sudo apt install python3-tk
 cd ~/McpOAuthFlow
 python3 -m venv v_env
 source v_env/bin/activate
@@ -108,6 +109,7 @@ python3 -c "import secrets; print(secrets.token_hex(32))"
 ## Установка / Install
 
 ```bash
+sudo apt install python3-tk
 mkdir -p /opt/mcp
 chown -R www-data:www-data /opt/mcp
 chmod 755 /opt/mcp
