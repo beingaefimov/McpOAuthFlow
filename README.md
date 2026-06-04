@@ -622,8 +622,8 @@ crontab -e
 ```
 
 > **Сколько nginx будет недоступен?** Обычно 10–30 секунд - только на время
-> ACME-challenge. Для MCP-сервера это приемлемо
+> ACME-challenge.
 > **How long is nginx down?** Usually 10–30 seconds — only for the ACME
-> challenge. That's acceptable for the MCP server.
+> challenge.
 
 ---
