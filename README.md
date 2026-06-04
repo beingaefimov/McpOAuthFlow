@@ -70,13 +70,13 @@ opens browser with login form -> after sign-in the token is injected automatical
 ## Тестовый локальный запуск / Local test run
 
 ```bash
-cd /mcp_oauth_flow
+cd /McpOAuthFlow
 python3 -m venv v_env
 source v_env/bin/activate
 pip install -r requirements.txt
-cd /mcp_oauth_flow && source v_env/bin/activate && python3 oauth_server.py --add-user admin admin
-cd /mcp_oauth_flow && source v_env/bin/activate && OAUTH_HOST="http://localhost" OAUTH_PORT="9002" OAUTH_SECRET_KEY="de01969527df1b0ef32e58eccb078819851b2a1a4a34478f38794ad2d72bce97" python3 oauth_server.py
-cd /mcp_oauth_flow && source v_env/bin/activate && OAUTH_SECRET_KEY="de01969527df1b0ef32e58eccb078819851b2a1a4a34478f38794ad2d72bce97" OAUTH_ISSUER="http://localhost:9002/oauth" python3 mcp_server.py
+cd /McpOAuthFlow && source v_env/bin/activate && python3 oauth_server.py --add-user admin admin
+cd /McpOAuthFlow && source v_env/bin/activate && OAUTH_HOST="http://localhost" OAUTH_PORT="9002" OAUTH_SECRET_KEY="de01969527df1b0ef32e58eccb078819851b2a1a4a34478f38794ad2d72bce97" python3 oauth_server.py
+cd /McpOAuthFlow && source v_env/bin/activate && OAUTH_SECRET_KEY="de01969527df1b0ef32e58eccb078819851b2a1a4a34478f38794ad2d72bce97" OAUTH_ISSUER="http://localhost:9002/oauth" python3 mcp_server.py
 ```
 
 ---
@@ -112,9 +112,9 @@ mkdir -p /opt/mcp
 chown -R www-data:www-data /opt/mcp
 chmod 755 /opt/mcp
 
-cp ~/mcp_oauth_flow/requirements.txt /opt/mcp/requirements.txt
-cp ~/mcp_oauth_flow/oauth_server.py /opt/mcp/oauth_server.py
-cp ~/mcp_oauth_flow/mcp_server.py /opt/mcp/mcp_server.py
+cp ~/McpOAuthFlow/requirements.txt /opt/mcp/requirements.txt
+cp ~/McpOAuthFlow/oauth_server.py /opt/mcp/oauth_server.py
+cp ~/McpOAuthFlow/mcp_server.py /opt/mcp/mcp_server.py
 
 cd /opt/mcp
 python3 -m venv v_env
@@ -216,7 +216,7 @@ EOF
 ```bash
 # Заменяем домен в конфиге nginx.conf
 # Replace the domain in nginx.conf
-cp ~/mcp_oauth_flow/nginx.conf /etc/nginx/sites-available/mcp
+cp ~/McpOAuthFlow/nginx.conf /etc/nginx/sites-available/mcp
 ln -sf /etc/nginx/sites-available/mcp /etc/nginx/sites-enabled/
 
 # Проверяем конфиг / Validate the config
@@ -457,7 +457,7 @@ If logs show errors after upgrade — roll back:
 ```bash
 systemctl stop mcp-oauth mcp-server
 cp /var/backups/mcp/oauth_YYYY-MM-DD_pre-upgrade.db /opt/mcp/oauth_users.db
-scp ~/mcp_oauth_flow/oauth_server.py user@your-server:/opt/mcp/   # предыдущая версия / previous version
+scp ~/McpOAuthFlow/oauth_server.py user@your-server:/opt/mcp/   # предыдущая версия / previous version
 systemctl start mcp-oauth mcp-server
 ```
 
