@@ -78,6 +78,7 @@ pip install -r requirements.txt
 cd ~/McpOAuthFlow && source v_env/bin/activate && python3 oauth_server.py --add-user admin admin
 cd ~/McpOAuthFlow && source v_env/bin/activate && OAUTH_HOST="http://localhost" OAUTH_PORT="9002" OAUTH_SECRET_KEY="de01969527df1b0ef32e58eccb078819851b2a1a4a34478f38794ad2d72bce97" python3 oauth_server.py
 cd ~/McpOAuthFlow && source v_env/bin/activate && OAUTH_SECRET_KEY="de01969527df1b0ef32e58eccb078819851b2a1a4a34478f38794ad2d72bce97" OAUTH_ISSUER="http://localhost:9002/oauth" python3 mcp_server.py
+npx @modelcontextprotocol/inspector@0.21.2
 ```
 
 ---
