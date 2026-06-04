@@ -1,7 +1,6 @@
 # MCP OAuth Flow
 
-OAuth 2.0 Flow для MCP Inspector и совместимых клиентов
-OAuth 2.0 Flow for MCP Inspector and compatible clients
+OAuth 2.0 Flow для MCP Inspector и совместимых клиентов / OAuth 2.0 Flow for MCP Inspector and compatible clients
 
 - Authorization Code + PKCE флоу (RFC 6749 + RFC 7636)
 - Форма логин/пароль / Login form (username/password)
