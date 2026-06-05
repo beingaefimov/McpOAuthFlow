@@ -298,7 +298,7 @@ systemctl status mcp-server
 
 ## Подключение через MCP Inspector / Connect via MCP Inspector
 
-1. Открыть MCP Inspector (`npx @modelcontextprotocol/inspector`).
+1. Открыть MCP Inspector (`npx @modelcontextprotocol/inspector@0.21.2`).
 2. Transport Type: **Streamable HTTP**.
 3. Server URL: `https://ДОМЕН/mcp`.
 4. Нажать **Connect** / Click **Connect**.
@@ -331,23 +331,6 @@ systemctl status mcp-server
 > The `oauth.issuer` format is an MCP convention, not this server's. Support
 > depends on the specific client; works in Inspector, may need adaptation for
 > Claude Desktop / Cursor.
-
----
-
-## Структура файлов на сервере / Server file layout
-
-```
-/opt/mcp/
-├── mcp_server.py - MCP-сервер (порт 6339) / MCP server (port 6339)
-├── oauth_server.py - OAuth-сервер (порт 9002) / OAuth server (port 9002)
-├── v_env/ - Python venv
-├── requirements.txt
-└── oauth_users.db - SQLite с пользователями (создаётся автоматически; если вынесли - путь см. в OAUTH_DB)
-                       / SQLite with users (auto-created; if relocated, see OAUTH_DB)
-
--/etc/systemd/system/mcp-oauth.service
-/etc/systemd/system/mcp-server.service
-```
 
 ---
 
