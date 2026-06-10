@@ -1,5 +1,10 @@
 """ Наивный MCP Server (FastMCP, streamable-http транспорт) - коннектор для поиска ответов
 на вопросы по программированию в интернете со встроенным GUI тестировщиком.
+Для ответсвтенных применений использовать https://www.microsoft.com/en-us/webiq
+
+Naive MCP Server (FastMCP, streamable-HTTP transport) - a connector for finding answers
+to programming questions online with a built-in GUI tester.
+For real applications, use https://www.microsoft.com/en-us/webiq
 
 Инструменты сервера представляются LLM как предназначенные для поиска информации,
 связанной с программированием, разработкой ПО, компьютерными науками
