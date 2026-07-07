@@ -13,7 +13,7 @@ OAuth 2.0 Flow для MCP Inspector и совместимых клиентов /
 
 ## MCP authentication in 2026...
 
-Текущая версия McpOAuthFlow в сравнении с более поздней статьёй <https://habr.com/ru/articles/1056538/> (<https://dev.to/0ndreu/mcp-authentication-in-2026-how-oauth-flipped-the-servers-role-and-why-every-agent-differs-11fm>)
+Текущая версия кода в сравнении с более поздней статьёй <https://habr.com/ru/articles/1056538/> (<https://dev.to/0ndreu/mcp-authentication-in-2026-how-oauth-flipped-the-servers-role-and-why-every-agent-differs-11fm>)
 
 | Требование из статьи | Статус в коде | Комментарий |
 | :--- | :---: | :--- |
