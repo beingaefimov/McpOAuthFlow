@@ -11,6 +11,19 @@ OAuth 2.0 Flow для MCP Inspector и совместимых клиентов /
 
 ![animated](animated.gif)
 
+## MCP authentication in 2026...
+
+Текущая версия McpOAuthFlow в сравнении с более поздней статьёй <https://habr.com/ru/articles/1056538/> (<https://dev.to/0ndreu/mcp-authentication-in-2026-how-oauth-flipped-the-servers-role-and-why-every-agent-differs-11fm>)
+
+| Требование из статьи | Статус в коде | Комментарий |
+| :--- | :---: | :--- |
+| **MCP-сервер = Resource Server** | ✅ Да | Токены выпускает внешний `oauth_server.py` |
+| **RFC 9728 (Protected Resource Metadata)** | ✅ Да | Эндпоинт `/.well-known/oauth-protected-resource` |
+| **Возврат 401 с WWW-Authenticate** | ✅ Да | Middleware направляет клиента к метаданным |
+| **Stateless HTTP** | ✅ Да | Используется `stateless_http=True` |
+| **Проверка Audience (`aud`)** | ❌ **Нет** | Токен не проверяется на принадлежность именно этому ресурсу |
+| **Поддержка DCR / CIMD** | ⚠️ Частично | Реализован прокси на DCR (`/register`). CIMD нет, но DCR поддерживается для обратной совместимости |
+
 ## Архитектура / Architecture
 
 ```
