@@ -24,6 +24,12 @@ OAuth 2.0 Flow для MCP Inspector и совместимых клиентов /
 | **Проверка Audience (`aud`)** | ❌ **Нет** | Токен не проверяется на принадлежность именно этому ресурсу |
 | **Поддержка DCR / CIMD** | ⚠️ Частично | Реализован прокси на DCR (`/register`). CIMD нет, но DCR поддерживается для обратной совместимости |
 
+## MCP authentication from time of 2026-07-28 Specification...
+
+[The 2026-07-28 Specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
+
+... not tested yet
+
 ## Архитектура / Architecture
 
 ```
