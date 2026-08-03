@@ -26,7 +26,7 @@ OAuth 2.0 Flow для MCP Inspector и совместимых клиентов /
 
 ## MCP authentication from time of 2026-07-28 Specification...
 
-[The 2026-07-28 Specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
+[The 2026-07-28 Specification](https://blog.modelcontextprotocol.io/posts/2026-07-28/) [e. c.](https://modelcontextprotocol.io/extensions/auth/enterprise-managed-authorization)
 
 ... not tested yet
 
